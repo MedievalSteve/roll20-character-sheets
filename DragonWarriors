@@ -1,0 +1,688 @@
+<div class="sheet-main">
+    <img src="https://i707.photobucket.com/albums/ww75/NomadDisaster/Screen%20Shot%202020-04-17%20at%2012.28.54%20am.png" />
+
+<div class="sheet-base">
+    <div class="sheet-buttonbar">
+        <div class="sheet-navbuttons">
+            <button type="action" name="act_character" class="sheet-topbuttons">U</button>
+            <button type="action" name="act_skills" class="sheet-topbuttons">y</button>
+            <button type="action" name="act_inventory" class="sheet-topbuttons">O</button>
+            <button type="action" name="act_languages" class="sheet-topbuttons">w</button>
+            <button type="action" name="act_magic" class="sheet-topbuttons">S</button>
+        </div>
+        
+        <div class="sheet-functions">
+           
+        </div>
+        
+        <div class="sheet-docbuttons">
+            <input type="hidden" name="attr_release" value="unread" class="sheet-release" />
+            <button type="action" name="act_release" class="sheet-topbuttons sheet-releasenotesbutton">N</button>
+            <input type="hidden" name="attr_documentation" value="unread" class="sheet-documentation" />
+            <button type="action" name="act_documentation" class="sheet-topbuttons sheet-documentationbutton">i</button>
+        </div>
+    </div>
+    
+    <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab"  value="character"  />
+    
+        <div class="sheet-character">
+            <h2>Character</h2>
+            <div class="sheet-common section">
+                <label>Name <input name="attr_character_name" type="text" /></label>
+                <label>Class
+                    <select name="attr_class">   
+                            <option value="None"></option>
+                            <option value="Knight">Knight</option>
+                            <option value="Barbarian">Barbarian</option>
+                            <option value="Sorcerer">Sorcerer</option>
+                            <option value="Mystic">Mystic</option>
+                            <option value="Sorcerer">Sorcerer</option>
+                            <option value="Elementalist">Elementalist</option>
+                            <option value="Warlock">Warlock</option>
+                            <option value="Assassin">Assassin</option>
+                            <option value="Knave">Knave</option>
+                            <option value="Hunter">Hunter</option>
+                            <option value="Priest">Priest</option>
+                    </select>
+                </label>
+                <label>Rank <input name="attr_rank" type="number" min="1" /></label>
+                <label>Experience Points <input name="attr_XP" type="number" /></label>
+                <label>Age <input name="attr_age" type="number" /></label>
+                <label>Gender <input name="attr_gender" type="text" /></label>
+                <label>Height <input name="attr_height" type="text" /></label>
+                <label>Build <input name="attr_build" type="text" /></label>
+                <label>Eye Colour <input name="attr_eyes" type="text" /></label>
+                <label>Hair colour / Style <input name="attr_hair" type="text" /></label>
+                <label>Origin Country <input name="attr_origin" type="text" /></label>
+                <label>Family Background <input name="attr_familybackground" type="text"/></label>
+            </div>
+        
+            <div class="sheet-attributes section">
+                <label>Strength</label><input type="number" name="attr_Strength" value="" />
+                <label>Reflexes</label><input type="number" name="attr_Reflexes" value="" />
+                <label>Intelligence</label><input type="number" name="attr_Intelligence" value="" />
+                <label>Psychic Talent</label><input type="number" name="attr_PsychicTalent" value="" />
+                <label>Looks</label><input type="number" name="attr_Looks" value="" />
+                
+                <label>Armour Factor </label><input type="number" name="attr_AF" value=""/>
+                
+                <label>Hit Points</label>
+                <label>Current <input type="number" name="attr_HP" value="" /> Max <input type="number" name="attr_MaxHP" value="" /></label>
+            </div>
+        
+            <div class="sheet-derivedattributes section">
+                <label>Attack </label><input type="number" name="attr_Attack" value=""/>
+                <label>Defence </label><input type="number" name="attr_Defence" value=""/>
+                <label>Evasion </label><input type="number" name="attr_Evasion" value=""/>
+                <label>Magical Attack </label><input type="number" name="attr_MagicalAttack" value=""/>
+                <label>Magical Defence </label><input type="number" name="attr_MagicalDefence" value=""/>
+                <label>Stealth </label><input type="number" name="attr_Stealth" value=""/>
+                <label>Perception </label><input type="number" name="attr_Perception" value=""/>
+            </div>
+        </div>
+        
+        <div class="sheet-skills">
+            <H2>Abilities and Skills</H2>
+            
+            <H3>Class Abilities</H3>
+                   <fieldset class="repeating_ClassAbilities section"> 
+                        <input type="text" name="attr_ClassAbility" />
+                        Description <textarea cols="1" rows="1" name="attr_classabilitydescription"> </textarea>
+                    </fieldset>
+                
+            <H3>Secondary Skills</H3>
+                    <fieldset class="repeating_SecondarySkills section">
+                            <input type="text" name="attr_SecondarySkill" />
+                            Level <select name="attr_SecondarySkillLevel">
+                                <option value="None"></option>
+                                <option value="Basic">Basic</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                            </select>
+                            Description <textarea cols="1" rows="1" name="attr_csecondaryskilldescription"> </textarea>
+                    </fieldset>
+        </div>
+        
+        <div class="sheet-languages">
+            <h2>Languages</h2>
+            <div class="modlang section">
+                <H3>Modern Languages</H3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Language</td>
+                            <th>Fluency</td>
+                            <th>Literate?</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language1" value="Elleslandic"/> Elleslandic
+                            </td>
+                            <td>
+                                <select name="attr_fluency1">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_literate10" value="Classic"/> Classic
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language2" value="Visic" /> Visic
+                            </td>
+                            <td>
+                                <select name="attr_fluency2">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate3" value="NikkarRunik" /> Nikkar Runik
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language3" value="LatterMercanian" /> Latter Mercanian</td>
+                            <td>
+                                <select name="attr_fluency3">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate3" value="NikkarRunik" /> Nikkar Runik
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language4" value="Cabbandari" /> Cabbandari</td>
+                            <td>
+                                <select name="attr_fluency4">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate5" value="Majestic" /> Majestic
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language5" value="Dakkandi" /> Dakkandi</td>
+                            <td>
+                                <select name="attr_fluency5"> 
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate5" value="Majestic" /> Majestic
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language6" value="Algandarve" /> Algandarve</td>
+                            <td>
+                                <select name="attr_fluency6">
+                                    <option value="None"></option>   
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate10" value="Classic" /> Classic
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language7" value="Beaulangue" /> Beaulangue</td>
+                            <td>
+                                <select name="attr_fluency7">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate10" value="Classic" /> Classic
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language8" value="Kurlish" /> Kurlish</td>
+                            <td>
+                                <select name="attr_fluency8">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate10" value="Classic" /> Classic
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language9" value="Emphidian" /> Emphidian</td>
+                            <td>
+                                <select name="attr_fluency9">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate9" value="Emphidian" /> Emphidian
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language10" value="Angate" /> Angate</td>
+                            <td>
+                                <select name="attr_fluency10">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate10" value="Classic" /> Classic
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language11" value="Opalarian" /> Opalarian</td>
+                            <td>
+                                <select name="attr_fluency11">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate16" value="Jezant" /> Jezant
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language12" value="Nascerine" /> Nascerine</td>
+                            <td>
+                                <select name="attr_fluency12">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate16" value="Jezant" /> Jezant
+                            </td>
+                        </tr>
+                            <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language13" value="Etyabeyely" /> Etya'be'yely</td>
+                            <td>
+                                <select name="attr_fluency13">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                Not written
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language14" value="Klav" /> Klav</td>
+                            <td>
+                                <select name="attr_fluency14">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate16" value="Jezant" /> Jezant
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language15" value="Unno" /> Unno</td>
+                            <td>
+                                <select name="attr_fluency15">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate16" value="Jezant" /> Jezant
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language16" value="Raukil" /> Raukil</td>
+                            <td>
+                                <select name="attr_fluency16">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate16" value="Jezant" /> Jezant
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language17" value="Tsutsuneng" /> Tsutsuneng</td>
+                            <td>
+                                <select name="attr_fluency17">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                <input type="checkbox" name="attr_literate17" value="KhitaiPictograms" /> Khitai Pictograms
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language18" value="CoradianTradersArgot" /> Coradian Trader's Argot</td>
+                            <td>
+                                <select name="attr_fluency18">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>                
+                            <td>
+                                Not written
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_language19" value="Arcane" /> Arcane</td>
+                            <td>
+                                <option value="None"></option>
+                                <option value="Fluent">Fluent</option>
+                            </td>                
+                            <td>
+                                Arcane Symbols
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="sheet-anclang section">
+                <label>Ancient Languages</label>
+                <table>
+                    <thead>
+                        <th>Language</th>
+                        <th>Fluency</th>
+                        <th>Literate?</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_alanguage1" value="AncientEmphidian"/> Ancient Emphidian
+                            </td>
+                            <td>
+                                <select name="attr_afluency1">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_literate9" value="Emphidian"/> Emphidian
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_alanguage2" value="AncientKaikuhran"/> Ancient Kaikuhran
+                            </td>
+                            <td>
+                                <select name="attr_afluency2">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_aliterate2" value="QemorHeiroglyphs"/> Qemor Heiroglyphs
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_alanguage3" value="Bacchile"/> Bacchile
+                            </td>
+                            <td>
+                                <select name="attr_afluency3">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_literate10" value="Classic"/> Classic
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_alanguage4" value="OldMercanian"/> Old Mercanian
+                            </td>
+                            <td>
+                                <select name="attr_afluency4">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_literate3" value="NikkarRunik"/> Nikkar Runik
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_alanguage5" value="OldKurlish"/> Old Kurlish
+                            </td>
+                            <td>
+                                <select name="attr_afluency5">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_literate10" value="Classic"/> Classic
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_alanguage6" value="Lughwyd"/> Lughwyd (not spoken)
+                            </td>
+                            <td>
+                                <select name="attr_afluency6">   
+                                    <option value="None"></option>
+                                    <option value="Fluent">Fluent</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Basic">Basic</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_aliterate6" value="Kell"/> Kell
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="sheet-inventory">
+            <h2>Inventory</h2>        
+            
+            <div class="sheet-possessions section">
+                <H3>Possesions</H3>
+                <fieldset class="repeating_InventoryItems"> 
+                    Item <input type="text" name="attr_InventoryItem" />
+                    Location <input type="text" name="attr_ItemLocation" />
+                    Encumberance <input type="number" name="attr_EncumberanceValue" />
+                </fieldset>
+                
+                Total Encumberance <input type="number" name="attr_TotalEncumberance" value=""/>
+    
+            </div>
+            
+            <div class="sheet-money section">
+                <H3>Cash on hand</H3>
+                Crowns <input type="number" name="attr_GC" value="" /> 
+                Florins <input type="number" name="attr_SF" value="" /> 
+                Pennies <input type="number" name="attr_CP" value="" />
+                <H3>Other wealth</H3>
+                <textarea name="attr_OtherWealth"></textarea>
+            </div>
+            
+            
+            <div class="sheet-armour section">
+                <H3>Armour</H3>
+                Type <input type="text" name="attr_Armour" value="" />
+                Armour Factor <input type="number" name="attr_AF" value="" />
+                Attack Penalty<input type="number" name="attr_ArmourAttackPenalty" value="" />
+                Defence Penalty<input type="number" name="attr_ArmourDefencePenalty" value="" />
+                Stealth Penalty<input type="number" name="attr_ArmourStealthPenalty" value="" />
+                Shield? <input type="checkbox" name="attr_shield" value="ShieldEquipped" />
+            </div>
+    
+            <div class="sheet-weapon section">
+                <H3>Weapons</H3>
+                <fieldset class="repeating_Weapons"> 
+                    Type <input type="text" name="attr_Weapon" value="" />
+                    Armour Bypass Roll <input type="text" name="attr_ABR" value="" />
+                    Damage<input type="text" name="attr_Damage" value="" size="4" />
+                    Short Range<input type="number" name="attr_WeaponShortRange" value="" />
+                    Medium Range<input type="number" name="attr_WeaponMediumRange" value="" />
+                    Long Range<input type="number" name="attr_WeaponLongRange" value="" />
+                </fieldset>
+            </div>
+            
+        </div>
+        
+        <div class="sheet-magic">
+            <h2>Magic</h2>
+            <div class="sheet-mana section">
+                <H3>Magic Points</H3>
+                <label>Current <input type="number" name="attr_mp" value="" /> Max <input type="number" name="attr_maxmp" value="" /></label>
+                
+                <label>Magic Points</label>
+                <label>Main Category Current <input type="number" name="attr_mainmp" value="" /> Max <input type="number" name="attr_mainmaxmp" value="" /></label>
+                <label>Secondary Category Current <input type="number" name="attr_secondmp" value="" /> Max <input type="number" name="attr_secondmaxmp" value="" /></label>
+                <label>Tertiary Category Current <input type="number" name="attr_thirdmp" value="" /> Max <input type="number" name="attr_thirdmaxmp" value="" /></label>
+                
+                <label>Psychic Fatigue Check</label>
+                
+            </div>
+            <div class="sheet-spells section">
+                <H3>Spells of Rank 1</H3>
+                <fieldset class="repeating_SpellsRankOne"> 
+                    Name <input type="text" name="attr_SpellName" value="" />
+                    Range <input type="text" name="attr_SpellRange" value="" />
+                    Duration <input type="text" name="attr_SpellDuration" value="" />
+                    Description <textarea name="attr_SpellDescription"></textarea>
+                </fieldset>
+                <H3>Spells of Rank 2</H3>
+                <fieldset class="repeating_SpellsRankTwo"> 
+                    Name <input type="text" name="attr_SpellName" value="" />
+                    Range <input type="text" name="attr_SpellRange" value="" />
+                    Duration <input type="text" name="attr_SpellDuration" value="" size="4" />
+                    Description <textarea name="attr_SpellDescription"></textarea>
+                </fieldset>
+                <H3>Spells of Rank 3</H3>
+                <fieldset class="repeating_SpellsRankThree"> 
+                    Name <input type="text" name="attr_SpellName" value="" />
+                    Range <input type="text" name="attr_SpellRange" value="" />
+                    Duration <input type="text" name="attr_SpellDuration" value="" size="4" />
+                    Description <textarea name="attr_SpellDescription"></textarea>
+                </fieldset>
+                <H3>Spells of Rank 4</H3>
+                <fieldset class="repeating_SpellsRankFour"> 
+                    Name <input type="text" name="attr_SpellName" value="" />
+                    Range <input type="text" name="attr_SpellRange" value="" />
+                    Duration <input type="text" name="attr_SpellDuration" value="" size="4" />
+                    Description <textarea name="attr_SpellDescription"></textarea>
+                </fieldset>
+                <H3>Spells of Rank 5</H3>
+                <fieldset class="repeating_SpellsRankFive"> 
+                    Name <input type="text" name="attr_SpellName" value="" />
+                    Range <input type="text" name="attr_SpellRange" value="" />
+                    Duration <input type="text" name="attr_SpellDuration" value="" size="4" />
+                    Description <textarea name="attr_SpellDescription"></textarea>
+                </fieldset>
+                <H3>Spells of Rank 6</H3>
+                <fieldset class="repeating_SpellsRankSix"> 
+                    Name <input type="text" name="attr_SpellName" value="" />
+                    Range <input type="text" name="attr_SpellRange" value="" />
+                    Duration <input type="text" name="attr_SpellDuration" value="" size="4" />
+                    Description <textarea name="attr_SpellDescription"></textarea>
+                </fieldset>
+                <H3>Spells of Rank 7</H3>
+                <fieldset class="repeating_SpellsRankSeven"> 
+                    Name <input type="text" name="attr_SpellName" value="" />
+                    Range <input type="text" name="attr_SpellRange" value="" />
+                    Duration <input type="text" name="attr_SpellDuration" value="" size="4" />
+                    Description <textarea name="attr_SpellDescription"></textarea>
+                </fieldset>
+                <H3>Spells of Rank 8</H3>
+                <fieldset class="repeating_SpellsRankEight"> 
+                    Name <input type="text" name="attr_SpellName" value="" />
+                    Range <input type="text" name="attr_SpellRange" value="" />
+                    Duration <input type="text" name="attr_SpellDuration" value="" size="4" />
+                    Description <textarea name="attr_SpellDescription"></textarea>
+                </fieldset>
+                <H3>Spells of Rank 9</H3>
+                <fieldset class="repeating_SpellsRankNine"> 
+                    Name <input type="text" name="attr_SpellName" value="" />
+                    Range <input type="text" name="attr_SpellRange" value="" />
+                    Duration <input type="text" name="attr_SpellDuration" value="" size="4" />
+                    Description <textarea name="attr_SpellDescription"></textarea>
+                </fieldset>
+                <H3>Spells of Rank 10</H3>
+                <fieldset class="repeating_SpellsRankTen"> 
+                    Name <input type="text" name="attr_SpellName" value="" />
+                    Range <input type="text" name="attr_SpellRange" value="" />
+                    Duration <input type="text" name="attr_SpellDuration" value="" size="4" />
+                    Description <textarea name="attr_SpellDescription"></textarea>
+                </fieldset>
+            </div>
+        </div>
+        
+        <div class="sheet-release">
+            Release notes info goes here 
+        </div>
+        
+        <div class="sheet-documentation">
+            <p>At Serpent King Games, we’re fans of Dragon Warriors as well as the current publishers of the game. We recognise the essential contribution that fans have made in keeping interest in the game alive over the past three decades or so. We are very happy to see additions to the Dragon Warriors setting, in the form of free fan-made websites or other internet-based content such as free e-books or e-zines. However, it is essential that all Dragon Warriors fan sites adhere to the following Fan Policy:</p>
+            
+            <p>1. Fan websites (or e-books, e-zines, etc.) must not be commercial enterprises. We have no objection to a fan site covering its costs through the use of adverts or similar, but you must not charge people to download or access fan-made material based on the Dragon Warriors setting.</p>
+            
+            <p>2. Fan websites(or e-books, e-zines, etc.) are explicitly NOT permitted to reprint copyright material, including such items as art, character professions, monsters, or adventures that have been printed by Serpent King Games or other official Dragon Warriors publishers.</p>
+            
+            <p>3. You may reference names, places, etc. from the Dragon Warriors setting.</p>
+            
+            <p>4. All fan websites (or e-books, e-zines, etc.) must include the following text, in legible form, on the front page or on the first page that refers to Dragon Warriors or Legend:</p>
+            
+            <p>“This website includes material based on the Dragon Warriors setting, as created by and copyright (c) Dave Morris and Oliver Johnson, and used according to the terms of the Serpent King Games Fan Policy. We are not permitted to charge you to use or access this content. This website is not published, endorsed, or officially approved by Serpent King Games. For more information about Dragon Warriors products and Serpent King Games, please visit www.serpentking.com”</p>
+            
+            <p>5. We expect fan websites (or e-books, e-zines, etc.) to use the Dragon Warriors setting responsibly and legally. That means avoiding associating the setting with extreme graphic violence, explicit sexual content, hate speech against any particular real-world segment of society, or anything else that does not present Dragon Warriors in a positive light.</p>
+            
+            <p>If you have any questions about the Fan Policy, please email info@serpentking.com</p>
+        </div>
+
+</div> 
+</div>
+
+    <script type="text/worker">
+        const buttonlist = ["character","skills","inventory","languages","magic","release","documentation"];
+        const read = ["release", "documentation"];
+        buttonlist.forEach(button => {
+            on(`clicked:${button}`, function() {
+                console.log(`${button} button was clicked!!`);
+                const settings = {};
+                settings['sheetTab'] = button;
+                if(read.includes(button)) settings[button] = 'read';
+                setAttrs(settings);
+            });
+        });
+    </script>
